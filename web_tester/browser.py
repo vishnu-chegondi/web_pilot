@@ -155,3 +155,13 @@ class Browser():
             return elements
         except Exception as _:
             return error
+    
+    def close_browser(self):
+        '''
+        Closes the browser
+        '''
+        try:
+            self.psuedo_browser.quit()
+            return "ActionPerformed"
+        except Exception as e:
+            return "Error in closing browser : {}".format(e)

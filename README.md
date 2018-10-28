@@ -5,8 +5,6 @@ A simple selenium extension which contains Browser class with methods defining d
 
 ## Development purpose
 
----
-
 - The goal of web tester is to reduce the code complexities for developing a testing script that should test if your web applications is working fine.
 - When ever a developer or designer make a changes to your web application. Testing needs to be performed for all the elements of your web.
 - After every change you may need to add or modify a lengthy selenium code.
@@ -14,8 +12,6 @@ A simple selenium extension which contains Browser class with methods defining d
 - web_tester handles all those and continous with checking all the elements.
 
 ## Actions Available
-
----
 
 - open_url
 - fetch_element
@@ -30,9 +26,11 @@ A simple selenium extension which contains Browser class with methods defining d
 
 python setup.py install
 
-## Example
+## Drivers
 
----
+For headless mode which can be used for automate the testing I prefer using [headless_ie_selenium](https://github.com/kybu/headless-selenium-for-win/releases) driver.
+
+## Example
 
 ``` python
 # Example for IE
@@ -42,7 +40,10 @@ driver_location = "/path/to/IEdriver.exe" #or "/path/to/selenium_headless_ie.exe
 
 browser = Browser(driver_location,"IE")
 
-browser.open_url('https://github.com/vishnu-chegondi/')
-action = browser.click_element('//*[@id="js-pjax-container"]/div/div[2]/div[3]/div[1]/div/ol/li[3]/span/span/a',"Unable to navigate to project")
+browser.open_url('https://selenium-python.readthedocs.io/')
+action = browser.click_element('//*[@id="selenium-with-python"]/div[2]/ul/li[1]/a',"Unable to click on element")
+if action == "ActionPerformed":
+    print ("Opened Docs for python selenium")
 
+# browser.psuedo_browser.quit()
 ```
