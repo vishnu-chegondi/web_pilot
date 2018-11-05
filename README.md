@@ -1,15 +1,15 @@
 
-# web_tester
+# web_pilot
 
 A simple selenium extension which contains Browser class with methods defining different actions can be performed on the web elements.
 
 ## Development purpose
 
-- The goal of web tester is to reduce the code complexities for developing a testing script that should test if your web applications is working fine.
+- The goal of web pilot is to reduce the code complexities for developing a testing script that should test if your web applications is working fine.
 - When ever a developer or designer make a changes to your web application. Testing needs to be performed for all the elements of your web.
 - After every change you may need to add or modify a lengthy selenium code.
 - Number of Exceptions are needed to be handled for each action.
-- web_tester handles all those and continous with checking all the elements.
+- web_pilot handles all those and continous with checking all the elements.
 
 ## Actions Available
 
@@ -30,11 +30,13 @@ python setup.py install
 
 For headless mode which can be used for automate the testing I prefer using [headless_ie_selenium](https://github.com/kybu/headless-selenium-for-win/releases) driver.
 
+>This is for windows only.
+
 ## Example
 
 ``` python
 # Example for IE
-from web_tester.browser import Browser
+from web_pilot.browser import Browser
 
 driver_location = "/path/to/IEdriver.exe" #or "/path/to/selenium_headless_ie.exe"
 
